@@ -1,0 +1,565 @@
+.main_area {
+    .contents_area {
+
+        .home_area {
+            display: flex;
+
+            .home_container {
+                .home_row {
+
+                    .home_clm {
+                        grid-template-columns: repeat(1, auto);
+                        grid-gap: 20px;
+                        justify-items: center;
+
+                        .home_img {
+                            position: relative;
+                            width: 250px;
+                            height: 250px;
+                            border: 10px solid var(--sweet-solid);
+                            border-radius: 50%;
+                            border-style: double;
+                            overflow: hidden;
+
+                            img {
+                                position: absolute;
+                                max-width: 130%;
+                                top: 0;
+                                left: -20px;
+                                -o-object-fit: cover;
+                                object-fit: cover;
+                            }
+
+                        }
+
+                        .home_info {
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            text-transform: capitalize;
+                            font-size: 2rem;
+                            color: var(--sweet-solid);
+                            line-height: 1.5;
+                            width: 100%;
+
+                            h4 {
+                                span {
+                                    text-transform: uppercase;
+                                }
+                            }
+
+                            .profession {
+
+                                h5 {
+                                    font-size: 1rem;
+                                    font-weight: 500;
+                                }
+
+                                span {
+                                    margin-left: 5px;
+                                    font-size: 1.5rem;
+                                    font-weight: 700;
+                                    color: var(--blue-500);
+                                }
+
+                                .spans {
+                                    span {
+                                        margin-left: 5px;
+                                        font-size: 1.5rem;
+                                        font-weight: 700;
+                                        color: var(--blue-500);
+                                    }
+
+                                    display: flex;
+                                    align-items: center;
+                                    width: 17.2rem;
+                                }
+                            }
+
+                            .social_icon {
+                                width: 100%;
+
+                                .nav_ul {
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    .social_item {
+                                        margin-left: 15px;
+
+                                        &:first-child {
+                                            margin-left: 0;
+                                        }
+
+                                        .social_link {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            border: 3px solid var(--sweet-solid);
+                                            width: 30px;
+                                            height: 30px;
+                                            border-radius: 50%;
+                                            border-style: double;
+                                            transition: all 0.3s;
+
+                                            .social_i {
+                                                font-size: 1rem;
+                                                color: var(--sweet-solid);
+                                                transition: all 0.3s;
+                                            }
+
+                                            &:hover {
+                                                transform: rotate(359deg);
+                                            }
+
+                                        }
+
+                                        &:nth-child(1) {
+                                            .social_link {
+                                                &:hover {
+                                                    border-color: var(--blue-800);
+                                                }
+
+                                                &:hover .social_i {
+                                                    color: var(--blue-800);
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(2) {
+                                            .social_link {
+                                                &:hover {
+                                                    border-color: var(--yellow-500);
+                                                }
+
+                                                &:hover .social_i {
+                                                    color: var(--yellow-500);
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(3) {
+                                            .social_link {
+                                                &:hover {
+                                                    border-color: var(--indigo-500);
+                                                }
+
+                                                &:hover .social_i {
+                                                    color: var(--indigo-500);
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(4) {
+                                            .social_link {
+                                                &:hover {
+                                                    border-color: var(--orange-500);
+                                                }
+
+                                                &:hover .social_i {
+                                                    color: var(--orange-500);
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(5) {
+                                            .social_link {
+                                                &:hover {
+                                                    border-color: var(--red-900);
+                                                }
+
+                                                &:hover .social_i {
+                                                    color: var(--red-900);
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(6) {
+                                            .social_link {
+                                                &:hover {
+                                                    border-color: var(--red-800);
+                                                }
+
+                                                &:hover .social_i {
+                                                    color: var(--red-800);
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(7) {
+                                            .social_link {
+                                                &:hover {
+                                                    border-color: var(--black-solid);
+                                                }
+
+                                                &:hover .social_i {
+                                                    color: var(--black-solid);
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+
+                            .hire_btn {
+                                align-items: center;
+                                justify-content: center;
+                                width: 100px;
+                                height: 25px;
+                                color: var(--sweet-solid);
+                                border-color: var(--sweet-solid);
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                    color: var(--white-solid);
+                                    background-color: var(--sweet-solid);
+                                    border: 0;
+                                    border-radius: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*----------responsive_area----------------*/
+// max
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (min-width: 1400px) {
+    .main_area {
+        .contents_area {
+
+            .home_area {
+                .home_container {
+                    .home_row {
+                        .home_clm {
+                            .home_img {
+                                img {}
+                            }
+
+                            .home_info {
+                                h3 {}
+
+                                h4 {}
+
+                                .profession {
+                                    h5 {}
+
+                                    .spans {
+                                        width: 220px;
+
+                                        span {}
+                                    }
+                                }
+
+                                .social_icon {
+                                    .nav_ul {
+                                        .social_item {
+                                            .social_link {
+                                                .social_i {}
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .hire_btn {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1200px) {}
+
+// `xl` applies to large devices (desktops, less than 1024px)
+@media (max-width: 1024px) {
+    .main_area {
+        .contents_area {
+
+            .home_area {
+                .home_container {
+                    .home_row {
+                        .home_clm {
+                            .home_img {
+                                img {}
+                            }
+
+                            .home_info {
+                                h3 {}
+
+                                h4 {}
+
+                                .profession {
+                                    h5 {}
+
+                                    .spans {
+                                        width: 220px;
+
+                                        span {}
+                                    }
+                                }
+
+                                .social_icon {
+                                    .nav_ul {
+                                        .social_item {
+                                            .social_link {
+                                                .social_i {}
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .hire_btn {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 992px) {
+    .main_area {
+        .contents_area {
+            padding-left: 0px;
+
+            .home_area {
+                .home_container {
+                    .home_row {
+                        .home_clm {
+                            .home_img {
+                                img {}
+                            }
+
+                            .home_info {
+                                h3 {}
+
+                                h4 {}
+
+                                .profession {
+                                    h5 {}
+
+                                    .spans {
+                                        width: 225px;
+
+                                        span {}
+                                    }
+                                }
+
+                                .social_icon {
+                                    .nav_ul {
+                                        .social_item {
+                                            .social_link {
+                                                .social_i {}
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .hire_btn {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 768px) {
+    .main_area {
+        .contents_area {
+
+            .home_area {
+                .home_container {
+                    .home_row {
+                        .home_clm {
+                            .home_img {
+                                img {}
+                            }
+
+                            .home_info {
+                                h3 {}
+
+                                h4 {}
+
+                                .profession {
+                                    h5 {}
+
+
+                                    .spans {
+
+                                        span {}
+                                    }
+                                }
+
+                                .social_icon {
+                                    .nav_ul {
+                                        .social_item {
+                                            .social_link {
+                                                .social_i {}
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .hire_btn {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+    .main_area {
+        .contents_area {
+
+            .section {
+                padding: 0;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            padding-left: 0;
+
+            .home_area {
+                .home_container {
+                    .home_row {
+                        .home_clm {
+                            width: 100%;
+
+                            .home_img {
+                                img {}
+                            }
+
+                            .home_info {
+                                h3 {}
+
+                                h4 {}
+
+                                .profession {
+
+                                    h5 {
+                                        font-size: calc(8px + 1vh);
+                                    }
+
+                                    .spans {
+                                        width: 155px;
+
+                                        span {
+                                            font-size: calc(10px + 1vh);
+                                        }
+                                    }
+
+                                }
+
+                                .social_icon {
+                                    .nav_ul {
+                                        justify-content: center;
+
+                                        .social_item {
+                                            .social_link {
+                                                .social_i {}
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .hire_btn {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// `sm` applies to x-small devices ( less than 320px)
+@media (max-width: 320px) {
+    .main_area {
+        .contents_area {
+            .home_area {
+                .home_container {
+                    .home_row {
+                        .home_clm {
+                            .home_img {
+                                width: 220px;
+                                height: 220px;
+
+                                img {}
+                            }
+
+                            .home_info {
+                                font-size: calc(13px + 1vh);
+
+                                h3 {}
+
+                                h4 {}
+
+                                .profession {
+
+                                    h5 {
+                                        font-size: calc(3px + 1vh);
+                                    }
+
+                                    .spans {
+                                        width: 125px;
+
+                                        span {
+                                            font-size: calc(7px + 1vh);
+                                        }
+                                    }
+
+                                }
+
+                                .social_icon {
+                                    .nav_ul {
+                                        .social_item {
+
+                                            &:first-child {
+                                                margin-left: 0;
+                                            }
+
+                                            .social_link {
+                                                width: 20px;
+                                                height: 20px;
+
+                                                .social_i {
+                                                    font-size: calc(4px + 1vh);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .hire_btn {
+                                    width: 85px;
+                                    height: 20px;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

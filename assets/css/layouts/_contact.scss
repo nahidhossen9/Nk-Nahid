@@ -1,0 +1,807 @@
+.main_area {
+  .contents_area {
+    .contact_area {
+      // display: none;
+
+      .contect_container {
+        .contact_row {
+          .contact_clm {
+            grid-template-columns: repeat(1, 1fr);
+
+            @mixin display {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+
+            .contact_title {
+              .title {}
+
+              p {
+                font-size: 13px;
+                color: var(--sweet-solid);
+                padding: 15px 0;
+                font-style: italic;
+                text-transform: capitalize;
+              }
+            }
+
+            .map {
+              .iframe {
+                border-radius: 3px;
+                padding: 5px;
+                border: 1px solid var(--sweet-solid);
+                width: 100%;
+              }
+            }
+
+            .contact_top {
+              .contact_top_title {
+                text-transform: capitalize;
+                font-size: 1.2rem;
+                color: var(--sweet-solid);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+
+              .contact_info {
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+
+
+                @mixin icon {
+                  padding: 7px;
+                  background-color: var(--sweet-solid);
+                  color: var(--white-solid);
+                  border-radius: 50%;
+                }
+
+                @mixin h5 {
+                  text-transform: capitalize;
+                  padding: 5px 0;
+                }
+
+                @mixin p {
+                  font-size: 13px;
+                  font-style: italic;
+                  text-transform: lowercase;
+                }
+
+                .contact_phone {
+                  @include display;
+
+                  .contact_phone_icon {
+                    @include icon;
+                  }
+
+                  .contact_phone_header {
+                    @include h5;
+                  }
+
+                  .contact_phone_description {
+                    @include p;
+
+                    .contact_phone_description_span {}
+                  }
+                }
+
+                .contact_location {
+                  @include display;
+
+                  .contact_location_icon {
+                    @include icon;
+                  }
+
+                  .contact_location_header {
+                    @include h5;
+                  }
+
+                  .contact_location_description {
+                    @include p;
+                    text-transform: capitalize;
+                    text-align: center;
+
+                    .contact_location_description_span {}
+                  }
+                }
+
+                .contact_email {
+                  @include display;
+
+                  .contact_email_icon {
+                    @include icon;
+                  }
+
+                  .contact_email_header {
+                    @include h5;
+                  }
+
+                  .contact_email_desciption {
+                    @include p;
+                  }
+                }
+
+                .contact_website {
+                  @include display;
+
+                  .contact_website_icon {
+                    @include icon;
+                  }
+
+                  .contact_website_header {
+                    @include h5;
+                  }
+
+                  .contact_website_description {
+                    @include p;
+                  }
+                }
+              }
+
+              .contact_massege_box {
+                .contact_massege_box_title {
+                  text-transform: capitalize;
+                  font-size: 1.2rem;
+                  color: var(--sweet-solid);
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+
+                  .contact_massege_box_title_span {
+                    display: var(--block-solid);
+                    font-size: 15px;
+                  }
+                }
+
+                .contact_massege_box_form {
+                  .form {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 10px;
+
+                    input {
+                      height: 50px;
+                      box-shadow: 0 0 20px rgb(233 30 99 / 0.15);
+                    }
+
+                    #name {}
+
+                    #email {}
+
+                    #subject {
+                      grid-column: 1/-1;
+                    }
+
+                    #text_area {
+                      grid-column: 1/3;
+                      height: 50px;
+                      outline: 0;
+                      border: 1px solid var(--gray-solid);
+                      border-radius: 35px;
+                      padding: 10px;
+                      box-shadow: 0 0 20px rgb(233 30 99 / 0.15);
+                    }
+
+                    .message_btn {
+                      grid-column: 1/-1;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+
+                      .form_btn {
+                        width: 125px;
+                        font-size: 13px;
+                        padding: 10px;
+                      }
+
+                    }
+
+                  }
+                }
+              }
+            }
+
+
+            .contact_middle {
+              grid-template-columns: repeat(4, 1fr);
+              grid-gap: 10px;
+              text-transform: capitalize;
+
+              h3 {
+                padding: 10px 0;
+              }
+
+              @mixin middleDisplay {
+                display: flex;
+                flex-direction: column;
+              }
+
+              @mixin middleDisplayUl {
+                display: flex;
+                flex-direction: column;
+              }
+
+              @mixin aQlR_title {
+                text-align: left;
+
+              }
+
+              @mixin middleLink {
+                text-transform: capitalize;
+                color: var(--black-solid);
+                transition: all 0.3s;
+                font-weight: 500;
+
+                &:hover {
+                  color: var(--green-800)
+                }
+              }
+
+
+              .contact_middle_about {
+                @include middleDisplay;
+                grid-column: 1/3;
+
+                .contact_middle_about_title {
+                  @include aQlR_title;
+                }
+
+                .contact_middle_about_description {}
+
+                .contact_middle_about_social_icon {
+                  ul {
+                    @include middleDisplayUl;
+                    flex-direction: row;
+                    align-items: center;
+
+                    li {
+                      margin-left: 10px;
+
+                      &:first-child {
+                        margin-left: 0;
+                      }
+
+
+                      a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #198754;
+                        height: 2rem;
+                        width: 2rem;
+                        border-radius: 50%;
+                        filter: drop-shadow(0px 15px 0 #198754);
+
+                        .i {
+                          color: rgb(0, 0, 0);
+                          transition: 0.3s;
+
+                        }
+
+                        &:hover .i {
+                          color: white;
+                        }
+
+                      }
+
+                      .facebook {
+                        background: transparent;
+                        border: 1px solid #3a00db;
+                        transition: 0.3s;
+                        filter: drop-shadow(0px 15px 0 #3a00db);
+
+
+                        &:hover {
+                          background-color: #3a00db;
+                          filter: drop-shadow(0px 15px 15px #3a00db);
+
+                        }
+                      }
+
+                      .instagram {
+                        background: transparent;
+                        border: 1px solid #0d6efd;
+                        transition: 0.3s;
+                        filter: drop-shadow(0px 15px 0 #0d6efd);
+
+
+                        &:hover {
+                          background-color: #0d6efd;
+                          filter: drop-shadow(0px 15px 15px #0d6efd);
+
+                        }
+
+                      }
+
+                      .twitter {
+                        background: transparent;
+                        border: 1px solid #0d6efd;
+                        transition: 0.3s;
+                        filter: drop-shadow(0px 15px 0 #0d6efd);
+
+
+                        &:hover {
+                          background-color: #0d6efd;
+                          filter: drop-shadow(0px 15px 15px #0d6efd);
+
+                        }
+                      }
+
+                      .linkedin {
+                        background: transparent;
+                        border: 1px solid #00e1ff;
+                        transition: 0.3s;
+                        filter: drop-shadow(0px 15px 0 #00e1ff);
+
+
+                        &:hover {
+                          background-color: #00e1ff;
+                          filter: drop-shadow(0px 15px 15px #00e1ff);
+
+                        }
+                      }
+
+                      .behance {
+                        background: transparent;
+                        border: 1px solid #0066ff;
+                        transition: 0.3s;
+                        filter: drop-shadow(0px 15px 0 #0066ff);
+
+
+                        &:hover {
+                          background-color: #0066ff;
+                          filter: drop-shadow(0px 15px 15px #0066ff);
+
+                        }
+                      }
+
+                      .youtube {
+                        background: transparent;
+                        border: 1px solid red;
+                        transition: 0.3s;
+                        filter: drop-shadow(0px 15px 0 red);
+
+
+                        &:hover {
+                          background-color: red;
+                          filter: drop-shadow(0px 15px 15px red);
+
+                        }
+                      }
+
+
+                    }
+                  }
+                }
+              }
+
+              .contact_middle_quick_link {
+                @include middleDisplay;
+
+                .contact_middle_quick_link_title {
+                  @include aQlR_title;
+                }
+
+                .contact_middle_quick_link_nav {
+                  ul {
+                    @include middleDisplayUl;
+
+                    .activeQL {
+                      a {
+                        transform: scale(1.3);
+                        font-weight: 600;
+                        color: var(--green-600) !important;
+
+                      }
+                    }
+
+                    .contact_middle_quick_link_nav_item {
+                      line-height: 2;
+
+                      .contact_middle_quick_link_nav_link {
+                        @include middleLink;
+                        display: block;
+                        text-transform: capitalize;
+                        color: black;
+                        transition: 0.3s;
+                        font-weight: 500;
+
+                        &:hover {
+                          color: #198754
+                        }
+                      }
+
+                      .sign_in {
+                        color: #6804ec;
+                        transition: 0.3s;
+
+                        &:hover {
+                          color: #320072;
+                        }
+                      }
+
+                      .sign_up {
+                        color: #01d201;
+                        transition: 0.3s;
+
+                        &:hover {
+                          color: #004c00
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .contact_middle_resource {
+                @include middleDisplay;
+
+                .contact_middle_resource_title {
+                  @include aQlR_title;
+                }
+
+                .contact_middle_resource_nav {
+                  @include middleDisplayUl;
+
+                  .contact_middle_resource_item {
+                    line-height: 2;
+
+                    .contact_middle_resource_link {
+                      @include middleLink;
+                      text-transform: capitalize;
+                      color: black;
+                      transition: 0.3s;
+                      font-weight: 500;
+
+                      &:hover {
+                        color: #198754
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+
+            .contact_footer {
+              border-top: 1px solid var(--sweet-solid);
+
+              .contact_footer_title {
+                text-transform: capitalize;
+                font-size: 13px;
+
+                .contact_footer_title_span {
+                  font-style: italic;
+                  font-weight: 600;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (min-width: 1400px) {}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1200px) {}
+
+// `xl` applies to large devices (desktops, less than 1024px)
+@media (max-width: 1024px) {}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 992px) {}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 768px) {
+  .main_area {
+    .contents_area {
+      .contact_area {
+        .contect_container {
+          .contact_row {
+            .contact_clm {
+              .contact_title {
+                .title {}
+              }
+
+              .map {
+                .iframe {}
+              }
+
+              .contact_top {
+                .contact_top_title {}
+
+                .contact_info {
+                  grid-template-columns: repeat(2, 1fr);
+
+                  .contact_phone {
+                    .contact_phone_icon {}
+
+                    .contact_phone_header {}
+
+                    .contact_phone_description {
+                      .contact_phone_description_span {}
+                    }
+                  }
+
+                  .contact_location {
+                    .contact_location_icon {}
+
+                    .contact_location_header {}
+
+                    .contact_location_description {
+                      text-align: center;
+
+                      .contact_location_description_span {}
+                    }
+                  }
+
+                  .contact_email {
+                    .contact_email_icon {}
+
+                    .contact_email_header {}
+
+                    .contact_email_desciption {}
+                  }
+
+                  .contact_website {
+                    .contact_website_icon {}
+
+                    .contact_website_header {}
+
+                    .contact_website_description {}
+                  }
+                }
+
+                .contact_massege_box {
+                  .contact_massege_box_title {
+                    .contact_massege_box_title_span {}
+                  }
+
+                  .contact_massege_box_form {
+                    .form {
+                      grid-template-columns: repeat(1, 1fr);
+
+                      input {
+                        grid-column: 1/-1;
+                      }
+
+                      .name {}
+
+                      .email {}
+
+                      .subject {}
+
+                      .text_area {}
+
+                      .form_btn {}
+                    }
+                  }
+                }
+              }
+
+              .contact_middle {
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 20px;
+
+                .contact_middle_about {
+                  grid-column: 1/-1;
+
+                  .contact_middle_about_title {}
+
+                  .contact_middle_about_description {}
+
+                  .contact_middle_about_social_icon {
+                    ul {
+                      li {
+                        a {
+                          .i {}
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .contact_middle_quick_link {
+                  .contact_middle_quick_link_title {}
+
+                  .contact_middle_quick_link_nav {
+                    ul {
+                      .contact_middle_quick_link_nav_item {
+                        .contact_middle_quick_link_nav_link {}
+
+                        .sign_in {}
+
+                        .sign_up {}
+                      }
+                    }
+                  }
+                }
+
+                .contact_middle_resource {
+                  .contact_middle_resource_title {}
+
+                  .contact_middle_resource_nav {
+                    .contact_middle_resource_item {
+                      .contact_middle_resource_link {}
+                    }
+                  }
+                }
+              }
+
+
+              .contact_footer {
+                .contact_footer_title {
+                  .contact_footer_title_span {}
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+  .main_area {
+    .contents_area {
+      .contact_area {
+        .contect_container {
+          .contact_row {
+            .contact_clm {
+              .contact_title {
+                .title {}
+              }
+
+              .map {
+                .iframe {}
+              }
+
+              .contact_top {
+                .contact_top_title {}
+
+                .contact_info {
+                  grid-template-columns: repeat(1, 1fr);
+
+                  .contact_phone {
+                    .contact_phone_icon {}
+
+                    .contact_phone_header {}
+
+                    .contact_phone_description {
+                      .contact_phone_description_span {}
+                    }
+                  }
+
+                  .contact_location {
+                    .contact_location_icon {}
+
+                    .contact_location_header {}
+
+                    .contact_location_description {
+                      .contact_location_description_span {}
+                    }
+                  }
+
+                  .contact_email {
+                    .contact_email_icon {}
+
+                    .contact_email_header {}
+
+                    .contact_email_desciption {}
+                  }
+
+                  .contact_website {
+                    .contact_website_icon {}
+
+                    .contact_website_header {}
+
+                    .contact_website_description {}
+                  }
+                }
+
+                .contact_massege_box {
+                  .contact_massege_box_title {
+                    .contact_massege_box_title_span {}
+                  }
+
+                  .contact_massege_box_form {
+                    .form {
+                      grid-template-columns: repeat(1, 1fr);
+
+                      input {
+                        grid-column: 1/-1;
+                        height: 35px;
+                      }
+
+                      #name {}
+
+                      #email {}
+
+                      #subject {}
+
+                      #text_area {
+                        height: 35px;
+                      }
+
+                      .form_btn {}
+                    }
+                  }
+                }
+              }
+
+
+              .contact_middle {
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 20px;
+
+                .contact_middle_about {
+                  grid-column: 1/-1;
+
+                  .contact_middle_about_title {}
+
+                  .contact_middle_about_description {}
+
+                  .contact_middle_about_social_icon {
+                    ul {
+                      li {
+                        a {
+                          .i {}
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .contact_middle_quick_link {
+                  .contact_middle_quick_link_title {}
+
+                  .contact_middle_quick_link_nav {
+                    ul {
+                      .contact_middle_quick_link_nav_item {
+                        .contact_middle_quick_link_nav_link {}
+
+                        .sign_in {}
+
+                        .sign_up {}
+                      }
+                    }
+                  }
+                }
+
+                .contact_middle_resource {
+                  .contact_middle_resource_title {}
+
+                  .contact_middle_resource_nav {
+                    .contact_middle_resource_item {
+                      .contact_middle_resource_link {}
+                    }
+                  }
+                }
+              }
+
+
+              .contact_footer {
+                .contact_footer_title {
+                  .contact_footer_title_span {}
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// `sm` applies to x-small devices ( less than 320px)
+@media (max-width: 320px) {}
